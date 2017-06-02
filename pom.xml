@@ -69,6 +69,10 @@
       <artifactId>camel-spring-boot-starter</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-camel</artifactId>
+    </dependency>
     <!-- testing -->
     <dependency>
       <groupId>junit</groupId>
