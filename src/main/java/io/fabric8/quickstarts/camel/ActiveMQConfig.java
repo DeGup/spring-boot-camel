@@ -16,7 +16,7 @@ public class ActiveMQConfig {
     @Value("${activemq.password")
     private String amqPassword;
 
-    @Value("${activemq.truststore")
+    @Value("${activemq.truststore}")
     private String trustStore;
 
     @Value("${activemq.broker-url}")
