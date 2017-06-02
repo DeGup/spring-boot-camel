@@ -3,6 +3,7 @@ package io.fabric8.quickstarts.camel;
 import org.apache.activemq.ActiveMQSslConnectionFactory;
 import org.apache.activemq.camel.component.ActiveMQComponent;
 import org.apache.activemq.camel.component.ActiveMQConfiguration;
+import org.apache.activemq.pool.PooledConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,8 +35,12 @@ public class ActiveMQConfig {
         factory.setTrustStore(trustStore);
         factory.setTrustStorePassword(trustsStorePassword);
 
+        PooledConnectionFactory pooledConnectionFactory = new PooledConnectionFactory(factory);
+        pooledConnectionFactory.setMaxConnections(10);
+
         ActiveMQConfiguration configuration = new ActiveMQConfiguration();
-        configuration.setConnectionFactory(factory);
+        configuration.setConnectionFactory(pooledConnectionFactory);
+        configuration.setMaxConcurrentConsumers(12);
 
         return new ActiveMQComponent(configuration);
     }
