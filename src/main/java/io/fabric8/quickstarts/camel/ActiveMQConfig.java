@@ -13,7 +13,7 @@ public class ActiveMQConfig {
     @Value("${activemq.username}")
     private String amqUsername;
 
-    @Value("${activemq.password")
+    @Value("${activemq.password}")
     private String amqPassword;
 
     @Value("${activemq.truststore}")
