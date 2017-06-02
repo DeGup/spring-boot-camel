@@ -122,9 +122,9 @@
     },
     {
       "name": "AMQ_SERVICE_ACCOUNT",
-      "displayName" :"AMQ service account",
+      "displayName": "AMQ service account",
       "value": "amq-service-account",
-      "required":  true
+      "required": true
     }
   ],
   "objects": [
@@ -218,24 +218,8 @@
                 "value": "${MAVEN_ARGS_APPEND}"
               },
               {
-                "name": "AMQ_USERNAME",
-                "value": "${AMQ_USERNAME}"
-              },
-              {
-                "name": "AMQ_PASSWORD",
-                "value": "${AMQ_PASSWORD}"
-              },
-              {
-                "name": "AMQ_BROKER_URL",
-                "value": "${AMQ_BROKER_URL}"
-              },
-              {
                 "name": "AMQ_TRUST_STORE",
                 "value": "${AMQ_TRUST_STORE}"
-              },
-              {
-                "name": "AMQ_TRUST_STORE_PASSWORD",
-                "value": "${AMQ_TRUST_STORE_PASSWORD}"
               }
             ]
           }
@@ -350,6 +334,22 @@
                         "fieldPath": "metadata.namespace"
                       }
                     }
+                  },
+                  {
+                    "name": "AMQ_USERNAME",
+                    "value": "${AMQ_USERNAME}"
+                  },
+                  {
+                    "name": "AMQ_PASSWORD",
+                    "value": "${AMQ_PASSWORD}"
+                  },
+                  {
+                    "name": "AMQ_BROKER_URL",
+                    "value": "${AMQ_BROKER_URL}"
+                  },
+                  {
+                    "name": "AMQ_TRUST_STORE_PASSWORD",
+                    "value": "${AMQ_TRUST_STORE_PASSWORD}"
                   }
                 ],
                 "resources": {
